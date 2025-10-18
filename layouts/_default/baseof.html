@@ -2,15 +2,16 @@
   <body>
     <header class="header">
       <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
-        <a href="{{ "/" | relLangURL }}" style="display:flex; align-items:center; gap:.75rem;">
+        <a href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Title }}" style="display:flex; align-items:center; gap:.75rem;">
           <img src="/img/logo.svg" alt="{{ .Site.Title }}" style="height:32px; width:auto;">
-          <strong>{{ .Site.Title }}</strong>
         </a>
+
         <nav class="lang" style="margin-left:auto; margin-right:1rem;">
           <a href="{{ "/" | relLangURL }}">EN</a>
           <a href="{{ "/de/" | relLangURL }}">DE</a>
           <a href="{{ "/es/" | relLangURL }}">ES</a>
         </nav>
+
         <nav class="main" style="display:flex; gap:1rem; align-items:center;">
           {{ range .Site.Menus.main }}
             <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
@@ -39,10 +40,11 @@
           </div>
           <div class="small">
             <strong>Contact</strong><br>
-            Mallorca Bicycle Rescue · info@example.com · +34 6XX XXX XXX
-            <br/>Autocares Devesa SL · CIF X0000000X
+            Mallorca Bicycle Rescue · <a href="mailto:admin@mallorcacycleshuttle.com">admin@mallorcacycleshuttle.com</a><br/>
+            Autocares Devesa SL CIF B08359606<br/>
+            Calle Fuster 36 a, 07460 Pollença
           </div>
-          <div class="small">© {{ now.Year }} Mallorca Bicycle Rescue</div>
+          <div class="small">© 2025 Mallorca Bicycle Rescue</div>
         </div>
       </div>
     </footer>
