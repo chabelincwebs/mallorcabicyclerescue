@@ -43,3 +43,27 @@ a:hover { text-decoration: underline; }
   border-radius:.75rem;
   /* critically, NO object-fit and NO fixed height here */
 }
+/* — overrides: tighter buttons — */
+.cta{ padding:.55rem .9rem !important; border-radius:.6rem; font-weight:700; }
+.hero .cta{ margin:.25rem 0 .5rem 0 !important; }
+.header .cta{ padding:.5rem .8rem !important; }
+
+/* optional: reduce default paragraph spacing in hero a touch */
+.hero p{ margin:0 0 .75rem 0 !important; }
+/* — FAQ accordion — */
+.faq-list{ display:grid; gap:.5rem; }
+.faq-item{
+  border:1px solid #eee; border-radius:.6rem; padding:.6rem .9rem; background:#fff;
+}
+.faq-item > summary{
+  cursor:pointer; font-weight:600; list-style:none; outline:none;
+}
+.faq-item > summary::-webkit-details-marker{ display:none; }
+.faq-item[open]{ border-color:#ddd; background:#fafafa; }
+.faq-item .answer{ margin-top:.5rem; color:var(--text); }
+/* — override: buttons to exactly 15px padding — */
+.cta{
+  display:inline-block !important;
+  padding:15px !important;        /* <= exactly 15px all around */
+  line-height:1.1 !important;     /* keeps text compact */
+}

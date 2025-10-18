@@ -9,7 +9,7 @@ hero_alt: "Cyclist on a coastal road in Mallorca"
 
 cta:
   label: "Buy rescue cover"
-  url: "https://shop.example.com/en"   # TODO: replace with your Ecwid EN link
+  url: "https://mallorcacycleshuttle.company.site/products/"   # TODO: replace with your Ecwid EN link
 
 note: "Fast, simple, island-wide."
 
@@ -72,5 +72,6 @@ faq:
   - q: "Can I change my bike during my stay?"
     a: "Yes—email us at least 12 hours before and we’ll update the policy."
 ---
+
 
 

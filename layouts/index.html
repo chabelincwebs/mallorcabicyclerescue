@@ -49,8 +49,13 @@
 <section>
   <div class="container">
     <h2>FAQs</h2>
-    <div class="grid">
-      {{ range . }}<div class="card"><h3>{{ .q }}</h3><p>{{ .a }}</p></div>{{ end }}
+    <div class="faq-list">
+      {{ range . }}
+        <details class="faq-item">
+          <summary>{{ .q }}</summary>
+          <div class="answer"><p>{{ .a }}</p></div>
+        </details>
+      {{ end }}
     </div>
   </div>
 </section>

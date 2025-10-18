@@ -20,7 +20,7 @@ languages:
           weight: 2
       cta:
         - name: "Buy cover"
-          url: "https://shop.example.com/en"   # TODO: replace with your Ecwid link
+          url: "https://mallorcacycleshuttle.company.site/products/"   # TODO: replace with your Ecwid link
           weight: 1
       legal:
         - name: "Legal Notice"
@@ -50,7 +50,7 @@ languages:
           weight: 2
       cta:
         - name: "Schutz kaufen"
-          url: "https://shop.example.com/de"   # TODO: Ecwid DE link
+          url: "https://mallorcacycleshuttle.company.site/de/products/"   # TODO: Ecwid DE link
           weight: 1
       legal:
         - name: "Impressum"
@@ -80,7 +80,7 @@ languages:
           weight: 2
       cta:
         - name: "Comprar cobertura"
-          url: "https://shop.example.com/es"   # TODO: Ecwid ES link
+          url: "https://mallorcacycleshuttle.company.site/es/products/"   # TODO: Ecwid ES link
           weight: 1
       legal:
         - name: "Aviso legal"
@@ -95,3 +95,4 @@ languages:
         - name: "Condiciones de venta"
           url: "/es/sale-terms/"
           weight: 4
+

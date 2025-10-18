@@ -7,10 +7,10 @@
         </a>
 
         <nav class="lang" style="margin-left:auto; margin-right:1rem;">
-          <a href="{{ "/" | relLangURL }}">EN</a>
-          <a href="{{ "/de/" | relLangURL }}">DE</a>
-          <a href="{{ "/es/" | relLangURL }}">ES</a>
-        </nav>
+  {{- range .Sites -}}
+    <a href="{{ .Home.RelPermalink }}">{{ upper .Language.Lang }}</a>
+  {{- end -}}
+</nav>
 
         <nav class="main" style="display:flex; gap:1rem; align-items:center;">
           {{ range .Site.Menus.main }}
@@ -50,3 +50,4 @@
     </footer>
   </body>
 </html>
+
