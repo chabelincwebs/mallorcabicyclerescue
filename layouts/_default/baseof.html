@@ -1,0 +1,18 @@
+﻿<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ "/" | relLangURL }}">EN</a> |
+      <a href="{{ "/de/" | relLangURL }}">DE</a> |
+      <a href="{{ "/es/" | relLangURL }}">ES</a>
+    </nav>
+  </header>
+  <main>{{ block "main" . }}{{ .Content }}{{ end }}</main>
+  <footer><small>&copy; {{ now.Year }} Mallorca Bicycle Rescue</small></footer>
+</body>
+</html>

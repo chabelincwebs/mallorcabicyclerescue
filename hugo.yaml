@@ -1,0 +1,10 @@
+﻿baseURL: "https://mallorcabicyclerescue.com/"
+title: "Mallorca Bicycle Rescue"
+languageCode: "en"
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false   # EN on apex, DE/ES under /de/ and /es/
+languages:
+  en: { languageName: "English",  weight: 1, contentDir: "content/en" }
+  de: { languageName: "Deutsch",  weight: 2, contentDir: "content/de" }
+  es: { languageName: "Español",  weight: 3, contentDir: "content/es" }
+enableRobotsTXT: true
