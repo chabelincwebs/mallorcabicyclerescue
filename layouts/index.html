@@ -3,10 +3,14 @@
   <div class="container">
     <h1>{{ with .Params.hero_title }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
     {{ with .Params.hero_subtitle }}<p>{{ . }}</p>{{ end }}
-    {{ with .Params.cta }}
-      <p><a class="cta" href="{{ .url }}">{{ .label }}</a></p>
-    {{ end }}
+    {{ with .Params.cta }}<p><a class="cta" href="{{ .url }}">{{ .label }}</a></p>{{ end }}
     {{ with .Params.note }}<p class="small">{{ . }}</p>{{ end }}
+
+    {{ with .Params.hero_image }}
+    <figure class="hero-media">
+      <img src="{{ . }}" alt="{{ $.Params.hero_alt | default $.Title }}">
+    </figure>
+    {{ end }}
   </div>
 </section>
 
@@ -15,10 +19,7 @@
   <div class="container">
     <div class="grid cols-3">
       {{ range . }}
-        <div class="card">
-          <h3>{{ .title }}</h3>
-          {{ with .text }}<p>{{ . }}</p>{{ end }}
-        </div>
+        <div class="card"><h3>{{ .title }}</h3>{{ with .text }}<p>{{ . }}</p>{{ end }}</div>
       {{ end }}
     </div>
   </div>
@@ -31,11 +32,7 @@
     <h2>Plans & pricing</h2>
     <div class="grid cols-3">
       {{ range . }}
-        <div class="card">
-          <h3>{{ .label }}</h3>
-          <p><strong>{{ .price }}</strong></p>
-          {{ with .desc }}<p class="small">{{ . }}</p>{{ end }}
-        </div>
+        <div class="card"><h3>{{ .label }}</h3><p><strong>{{ .price }}</strong></p>{{ with .desc }}<p class="small">{{ . }}</p>{{ end }}</div>
       {{ end }}
     </div>
   </div>
@@ -44,14 +41,7 @@
 
 {{ with .Params.good_to_know }}
 <section>
-  <div class="container">
-    <h2>Good to know</h2>
-    <ul>
-      {{ range . }}
-        <li>{{ . }}</li>
-      {{ end }}
-    </ul>
-  </div>
+  <div class="container"><h2>Good to know</h2><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></div>
 </section>
 {{ end }}
 
@@ -60,12 +50,7 @@
   <div class="container">
     <h2>FAQs</h2>
     <div class="grid">
-      {{ range . }}
-        <div class="card">
-          <h3>{{ .q }}</h3>
-          <p>{{ .a }}</p>
-        </div>
-      {{ end }}
+      {{ range . }}<div class="card"><h3>{{ .q }}</h3><p>{{ .a }}</p></div>{{ end }}
     </div>
   </div>
 </section>
