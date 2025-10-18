@@ -1,18 +1,50 @@
-﻿<!doctype html>
-<html lang="{{ .Site.Language.Lang }}">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-</head>
-<body>
-  <header>
-    <nav>
-      <a href="{{ "/" | relLangURL }}">EN</a> |
-      <a href="{{ "/de/" | relLangURL }}">DE</a> |
-      <a href="{{ "/es/" | relLangURL }}">ES</a>
-    </nav>
-  </header>
-  <main>{{ block "main" . }}{{ .Content }}{{ end }}</main>
-  <footer><small>&copy; {{ now.Year }} Mallorca Bicycle Rescue</small></footer>
-</body>
+﻿{{ partial "head.html" . }}
+  <body>
+    <header class="header">
+      <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:1rem;">
+        <a href="{{ "/" | relLangURL }}" style="display:flex; align-items:center; gap:.75rem;">
+          <img src="/img/logo.svg" alt="{{ .Site.Title }}" style="height:32px; width:auto;">
+          <strong>{{ .Site.Title }}</strong>
+        </a>
+        <nav class="lang" style="margin-left:auto; margin-right:1rem;">
+          <a href="{{ "/" | relLangURL }}">EN</a>
+          <a href="{{ "/de/" | relLangURL }}">DE</a>
+          <a href="{{ "/es/" | relLangURL }}">ES</a>
+        </nav>
+        <nav class="main" style="display:flex; gap:1rem; align-items:center;">
+          {{ range .Site.Menus.main }}
+            <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          {{ end }}
+          {{ with index .Site.Menus "cta" }}
+            {{ range . }}
+              <a class="cta" href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
+          {{ end }}
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      {{ block "main" . }}{{ .Content }}{{ end }}
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div style="display:grid; gap:1rem;">
+          <div class="small">
+            <strong>Legal</strong><br>
+            {{ range .Site.Menus.legal }}
+              <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>{{ if not (eq .KeyName (index (last 1 $.Site.Menus.legal) 0).KeyName) }} · {{ end }}
+            {{ end }}
+          </div>
+          <div class="small">
+            <strong>Contact</strong><br>
+            Mallorca Bicycle Rescue · info@example.com · +34 6XX XXX XXX
+            <br/>Autocares Devesa SL · CIF X0000000X
+          </div>
+          <div class="small">© {{ now.Year }} Mallorca Bicycle Rescue</div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
