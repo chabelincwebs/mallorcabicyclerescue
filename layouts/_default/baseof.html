@@ -8,7 +8,7 @@
 
         <nav class="lang" style="margin-left:auto; margin-right:1rem;">
   {{- range .Sites -}}
-    <a href="{{ .Home.RelPermalink }}">{{ upper .Language.Lang }}</a>
+    <a href="{{ .Home.Permalink }}">{{ upper .Language.Lang }}</a>
   {{- end -}}
 </nav>
 
@@ -50,4 +50,5 @@
     </footer>
   </body>
 </html>
+
 
