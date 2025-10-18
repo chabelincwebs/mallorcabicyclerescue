@@ -8,7 +8,7 @@
     {{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- System fonts for speed; add a Google Font later if you want -->
+    <!-- No SRI on purpose to avoid mismatch with Cloudflare minify -->
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ .Title }}" />
