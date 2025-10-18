@@ -1,15 +1,17 @@
-﻿{{- $css := resources.Get "css/main.css" | minify | fingerprint -}}
-<!doctype html>
+﻿<!doctype html>
 <html lang="{{ .Site.Language.Lang }}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
     {{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!-- No SRI on purpose to avoid mismatch with Cloudflare minify -->
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+    <!-- Plain static CSS to avoid CDN/pipeline issues -->
+    <link rel="stylesheet" href="/css/main.css" />
+
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ .Title }}" />
     {{ with .Params.description }}<meta property="og:description" content="{{ . }}" />{{ end }}
