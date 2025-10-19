@@ -1,11 +1,9 @@
-﻿---
+---
 title: "Rescate Ciclista Mallorca"
 description: "Recogida de ciclistas en toda la isla. Simple. Rápido. Fiable."
 
 hero_title: "Rescate ciclista en toda Mallorca"
 hero_subtitle: "Si falla la bici o el cuerpo, te llevamos adonde necesites."
-hero_image: "/img/hero-1920.webp"
-hero_alt: "Ciclismo en una carretera costera de Mallorca"
 
 cta:
   label: "Comprar cobertura"
@@ -70,3 +68,5 @@ faq:
   - q: "¿Puedo cambiar de bici?"
     a: "Sí: avísanos por email con 12 h de antelación y actualizamos la póliza."
 ---
+
+

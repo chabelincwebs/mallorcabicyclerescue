@@ -1,16 +1,10 @@
-﻿{{ define "main" }}
-<section class="hero">
+{{ define "main" }}
+<section>
   <div class="container">
     <h1>{{ with .Params.hero_title }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
     {{ with .Params.hero_subtitle }}<p>{{ . }}</p>{{ end }}
     {{ with .Params.cta }}<p><a class="cta" href="{{ .url }}">{{ .label }}</a></p>{{ end }}
     {{ with .Params.note }}<p class="small">{{ . }}</p>{{ end }}
-
-    {{ with .Params.hero_image }}
-    <figure class="hero-media">
-      <img src="{{ . }}" alt="{{ $.Params.hero_alt | default $.Title }}">
-    </figure>
-    {{ end }}
   </div>
 </section>
 
@@ -49,13 +43,8 @@
 <section>
   <div class="container">
     <h2>FAQs</h2>
-    <div class="faq-list">
-      {{ range . }}
-        <details class="faq-item">
-          <summary>{{ .q }}</summary>
-          <div class="answer"><p>{{ .a }}</p></div>
-        </details>
-      {{ end }}
+    <div class="grid">
+      {{ range . }}<div class="card"><h3>{{ .q }}</h3><p>{{ .a }}</p></div>{{ end }}
     </div>
   </div>
 </section>

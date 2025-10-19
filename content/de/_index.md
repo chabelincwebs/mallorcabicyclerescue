@@ -1,11 +1,9 @@
-﻿---
+---
 title: "Mallorca Fahrrad-Rettung"
 description: "Abholung von Radfahrern auf ganz Mallorca. Einfach. Schnell. Zuverlässig."
 
 hero_title: "Mallorca Fahrrad-Rettung"
 hero_subtitle: "Wenn Rad oder Körper versagen, bringen wir dich dorthin, wo du hinmusst."
-hero_image: "/img/hero-1920.webp"
-hero_alt: "Radfahren auf Mallorcas Küstenstraße"
 
 cta:
   label: "Rettungsschutz kaufen"
@@ -70,3 +68,5 @@ faq:
   - q: "Rad wechseln?"
     a: "Gerne – mindestens 12 Std. vorher per E-Mail melden."
 ---
+
+

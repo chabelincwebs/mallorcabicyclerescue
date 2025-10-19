@@ -1,11 +1,9 @@
-﻿---
+---
 title: "Mallorca Bicycle Rescue"
 description: "Island-wide cyclist pickup if your bike or body breaks. Simple. Fast. Reliable."
 
 hero_title: "Mallorca Bicycle Rescue"
 hero_subtitle: "If your bike or your body breaks, we get you where you need to be."
-hero_image: "/img/hero-1920.webp"
-hero_alt: "Cyclist on a coastal road in Mallorca"
 
 cta:
   label: "Buy rescue cover"
