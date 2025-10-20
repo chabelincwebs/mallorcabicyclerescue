@@ -1,13 +1,12 @@
 ---
 title: "Mallorca Bicycle Rescue"
 description: "Island-wide cyclist pickup if your bike or body breaks. Simple. Fast. Reliable."
-
 hero_title: "Mallorca Bicycle Rescue"
 hero_subtitle: "If your bike or your body breaks, we get you where you need to be."
 
 cta:
   label: "Buy rescue cover"
-  url: "https://mallorcacycleshuttle.company.site/products/"   # TODO: replace with your Ecwid EN link
+  url: "https://mallorcacycleshuttle.company.site/products/"
 
 note: "Fast, simple, island-wide."
 

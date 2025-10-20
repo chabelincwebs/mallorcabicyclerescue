@@ -3,14 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>
-      {{- $t := .Title -}}
-      {{- if $t | default "" -}}
-        {{ $t }} | {{ .Site.Title }}
-      {{- else -}}
-        {{ .Site.Title }}
-      {{- end -}}
-    </title>
+    <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
@@ -20,19 +13,19 @@
           <img src="/img/logo.svg" alt="{{ .Site.Title }}" style="height:32px; width:auto;">
         </a>
 
-        <!-- Language switcher (explicit, stable) -->
-        <nav class="lang" style="margin-left:auto; margin-right:1rem; display:flex; gap:.75rem;">
-          <a href="/en/" {{ if eq .Site.Language.Lang "en" }}style="font-weight:bold;"{{ end }}>EN</a>
-          <a href="/de/" {{ if eq .Site.Language.Lang "de" }}style="font-weight:bold;"{{ end }}>DE</a>
-          <a href="/es/" {{ if eq .Site.Language.Lang "es" }}style="font-weight:bold;"{{ end }}>ES</a>
+        <nav class="lang" style="margin-left:auto; margin-right:1rem;">
+          <a href="{{ "/"    | relLangURL }}">EN</a>
+          <a href="{{ "/de/" | relLangURL }}">DE</a>
+          <a href="{{ "/es/" | relLangURL }}">ES</a>
         </nav>
 
-        <!-- Main header menu (from config only) -->
         <nav class="main" style="display:flex; gap:1rem; align-items:center;">
-          {{ with .Site.Menus.main }}
-            {{ range . }}
-              {{/* Prefer URL from config; relLangURL localizes it. */}}
-              <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          {{ $s := newScratch }}
+          {{ range .Site.Menus.main }}
+            {{ $url := (cond .Page (.Page.RelPermalink) (.URL | relLangURL)) }}
+            {{ if not ($s.Get $url) }}
+              <a href="{{ $url }}">{{ .Name }}</a>
+              {{ $s.Set $url true }}
             {{ end }}
           {{ end }}
         </nav>
@@ -44,17 +37,8 @@
     </main>
 
     <footer class="footer">
-      <div class="container" style="display:grid; gap:1rem;">
+      <div class="container">
         <div class="small">
-          <strong>Legal</strong><br>
-          {{ with .Site.Menus.legal }}
-            {{ range . }}
-              <a href="{{ .URL | relLangURL }}">{{ .Name }}</a><br/>
-            {{ end }}
-          {{ end }}
-        </div>
-
-        <div class="small" style="margin-top:1rem;">
           <strong>Contact</strong><br>
           Mallorca Bicycle Rescue · <a href="mailto:admin@mallorcacycleshuttle.com">admin@mallorcacycleshuttle.com</a><br/>
           Autocares Devesa SL CIF B08359606<br/>

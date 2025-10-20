@@ -1,10 +1,6 @@
-﻿---
+---
 title: "Condiciones Generales de Venta"
 description: "Condiciones para la compra de productos y servicios de Mallorca Bicycle Rescue."
-menu:
-  legal:
-    name: "Condiciones de Venta"
-    weight: 40
 ---
 
 # TÉRMINOS (lenguaje sencillo, vinculantes)
@@ -43,3 +39,8 @@ No asumimos responsabilidad más allá de lo expresamente indicado aquí.
 ## 7) Fechas especiales
 Sin servicio el **25 de diciembre**.  
 Servicio restringido el día de la **Mallorca 312** por cortes de carreteras.
+
+
+
+
+

@@ -3,3 +3,11 @@
 /.hugo_build.lock
 .DS_Store
 Thumbs.db
+
+# Backup files
+*.backup
+*.bak
+*_backup/
+content.menu-backup/
+layouts_backup/
+layouts_reset_prev/

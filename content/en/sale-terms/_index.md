@@ -1,10 +1,6 @@
-﻿---
+---
 title: "Terms & Conditions of Sale"
 description: "Terms for purchasing Mallorca Bicycle Rescue products and services."
-menu:
-  legal:
-    name: "Terms and Conditions of Sale"
-    weight: 40
 ---
 
 # TERMS (plain-English, binding)

@@ -1,52 +1,87 @@
 {{ define "main" }}
-<section>
-  <div class="container">
-    <h1>{{ with .Params.hero_title }}{{ . }}{{ else }}{{ .Title }}{{ end }}</h1>
-    {{ with .Params.hero_subtitle }}<p>{{ . }}</p>{{ end }}
-    {{ with .Params.cta }}<p><a class="cta" href="{{ .url }}">{{ .label }}</a></p>{{ end }}
-    {{ with .Params.note }}<p class="small">{{ . }}</p>{{ end }}
-  </div>
-</section>
+  {{/* Hero Section */}}
+  <section class="hero" style="background:#f8f9fa; padding:4rem 0;">
+    <div class="container" style="text-align:center;">
+      {{ if .Params.hero_title }}<h1>{{ .Params.hero_title }}</h1>{{ else }}<h1>{{ .Title }}</h1>{{ end }}
+      {{ if .Params.hero_subtitle }}<p style="font-size:1.25rem; margin:1rem 0;">{{ .Params.hero_subtitle }}</p>{{ end }}
+      {{ if .Params.cta }}
+        <a href="{{ .Params.cta.url }}" class="cta-button" style="display:inline-block; background:#007bff; color:white; padding:1rem 2rem; text-decoration:none; border-radius:5px; margin:1rem 0;">
+          {{ .Params.cta.label }}
+        </a>
+      {{ end }}
+      {{ if .Params.note }}<p style="margin-top:1rem; font-style:italic;">{{ .Params.note }}</p>{{ end }}
+    </div>
+  </section>
 
-{{ with .Params.features }}
-<section>
-  <div class="container">
-    <div class="grid cols-3">
+  {{/* Features Section */}}
+  {{ with .Params.features }}
+  <section style="padding:3rem 0;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
+        {{ range . }}
+        <div>
+          <h3>{{ .title }}</h3>
+          <p>{{ .text }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Pricing Section */}}
+  {{ with .Params.pricing }}
+  <section style="background:#f8f9fa; padding:3rem 0;">
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:2rem;">Pricing</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem;">
+        {{ range . }}
+        <div style="border:1px solid #dee2e6; padding:1.5rem; border-radius:5px; background:white;">
+          <h3>{{ .label }}</h3>
+          <p style="font-size:1.5rem; font-weight:bold; color:#007bff;">{{ .price }}</p>
+          <p>{{ .desc }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Good to Know Section */}}
+  {{ with .Params.good_to_know }}
+  <section style="padding:3rem 0;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">Good to know</h2>
+      <ul>
+        {{ range . }}
+        <li style="margin-bottom:0.75rem;">{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* FAQ Section */}}
+  {{ with .Params.faq }}
+  <section style="background:#f8f9fa; padding:3rem 0;">
+    <div class="container">
+      <h2 style="margin-bottom:2rem;">Frequently Asked Questions</h2>
       {{ range . }}
-        <div class="card"><h3>{{ .title }}</h3>{{ with .text }}<p>{{ . }}</p>{{ end }}</div>
+      <div style="margin-bottom:1.5rem;">
+        <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">{{ .q }}</h3>
+        <p style="margin-left:1rem;">{{ .a }}</p>
+      </div>
       {{ end }}
     </div>
-  </div>
-</section>
-{{ end }}
+  </section>
+  {{ end }}
 
-{{ with .Params.pricing }}
-<section>
-  <div class="container">
-    <h2>Plans & pricing</h2>
-    <div class="grid cols-3">
-      {{ range . }}
-        <div class="card"><h3>{{ .label }}</h3><p><strong>{{ .price }}</strong></p>{{ with .desc }}<p class="small">{{ . }}</p>{{ end }}</div>
-      {{ end }}
+  {{/* Render any markdown content if present */}}
+  {{ with .Content }}
+  <section style="padding:3rem 0;">
+    <div class="container">
+      {{ . }}
     </div>
-  </div>
-</section>
-{{ end }}
-
-{{ with .Params.good_to_know }}
-<section>
-  <div class="container"><h2>Good to know</h2><ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul></div>
-</section>
-{{ end }}
-
-{{ with .Params.faq }}
-<section>
-  <div class="container">
-    <h2>FAQs</h2>
-    <div class="grid">
-      {{ range . }}<div class="card"><h3>{{ .q }}</h3><p>{{ .a }}</p></div>{{ end }}
-    </div>
-  </div>
-</section>
-{{ end }}
+  </section>
+  {{ end }}
 {{ end }}

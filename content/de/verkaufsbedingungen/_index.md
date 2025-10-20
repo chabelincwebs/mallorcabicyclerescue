@@ -1,10 +1,6 @@
-﻿---
+---
 title: "Allgemeine Verkaufsbedingungen"
 description: "Bedingungen für den Kauf von Produkten und Dienstleistungen von Mallorca Bicycle Rescue."
-menu:
-  legal:
-    name: "Allgemeine Verkaufsbedingungen"
-    weight: 40
 ---
 
 # BEDINGUNGEN (verständlich formuliert, verbindlich)
@@ -43,3 +39,4 @@ Unsere Haftung ist auf die hier ausdrücklich genannten Pflichten beschränkt.
 ## 7) Besondere Tage
 Kein Service am **25. Dezember**.  
 Eingeschränkter Service am Tag der **Mallorca 312** wegen Straßensperrungen.
+

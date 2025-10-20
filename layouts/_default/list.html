@@ -1,20 +1,118 @@
 {{ define "title" }}{{ .Title }}{{ end }}
 
 {{ define "main" }}
-<section>
-  <div class="container content-wrap">
-    <article class="prose content-prose">
-      <h1>{{ .Title }}</h1>
-      {{ with .Content }}{{ . }}{{ end }}
-
-      {{ if .Pages }}
-        <ul>
-          {{ range .Pages }}
-            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
+{{/* Check if this is a language home page (e.g., /de/, /es/) */}}
+{{ $isLangHome := false }}
+{{ if .File }}
+  {{ if and (eq .Kind "section") (or (eq .File.Dir "de/") (eq .File.Dir "es/")) }}
+    {{ $isLangHome = true }}
+  {{ end }}
+{{ end }}
+{{ if $isLangHome }}
+  {{/* This is a language home page - use the homepage template */}}
+  {{/* Hero Section */}}
+  <section class="hero" style="background:#f8f9fa; padding:4rem 0;">
+    <div class="container" style="text-align:center;">
+      {{ if .Params.hero_title }}<h1>{{ .Params.hero_title }}</h1>{{ else }}<h1>{{ .Title }}</h1>{{ end }}
+      {{ if .Params.hero_subtitle }}<p style="font-size:1.25rem; margin:1rem 0;">{{ .Params.hero_subtitle }}</p>{{ end }}
+      {{ if .Params.cta }}
+        <a href="{{ .Params.cta.url }}" class="cta-button" style="display:inline-block; background:#007bff; color:white; padding:1rem 2rem; text-decoration:none; border-radius:5px; margin:1rem 0;">
+          {{ .Params.cta.label }}
+        </a>
       {{ end }}
-    </article>
-  </div>
-</section>
+      {{ if .Params.note }}<p style="margin-top:1rem; font-style:italic;">{{ .Params.note }}</p>{{ end }}
+    </div>
+  </section>
+
+  {{/* Features Section */}}
+  {{ with .Params.features }}
+  <section style="padding:3rem 0;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
+        {{ range . }}
+        <div>
+          <h3>{{ .title }}</h3>
+          <p>{{ .text }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Pricing Section */}}
+  {{ with .Params.pricing }}
+  <section style="background:#f8f9fa; padding:3rem 0;">
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:2rem;">Pricing</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem;">
+        {{ range . }}
+        <div style="border:1px solid #dee2e6; padding:1.5rem; border-radius:5px; background:white;">
+          <h3>{{ .label }}</h3>
+          <p style="font-size:1.5rem; font-weight:bold; color:#007bff;">{{ .price }}</p>
+          <p>{{ .desc }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Good to Know Section */}}
+  {{ with .Params.good_to_know }}
+  <section style="padding:3rem 0;">
+    <div class="container">
+      <h2 style="margin-bottom:1.5rem;">Good to know</h2>
+      <ul>
+        {{ range . }}
+        <li style="margin-bottom:0.75rem;">{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* FAQ Section */}}
+  {{ with .Params.faq }}
+  <section style="background:#f8f9fa; padding:3rem 0;">
+    <div class="container">
+      <h2 style="margin-bottom:2rem;">Frequently Asked Questions</h2>
+      {{ range . }}
+      <div style="margin-bottom:1.5rem;">
+        <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">{{ .q }}</h3>
+        <p style="margin-left:1rem;">{{ .a }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* Render any markdown content if present */}}
+  {{ with .Content }}
+  <section style="padding:3rem 0;">
+    <div class="container">
+      {{ . }}
+    </div>
+  </section>
+  {{ end }}
+
+{{ else }}
+  {{/* Regular list page */}}
+  <section>
+    <div class="container content-wrap">
+      <article class="prose content-prose">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}{{ . }}{{ end }}
+
+        {{ if .Pages }}
+          <ul>
+            {{ range .Pages }}
+              <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </article>
+    </div>
+  </section>
+{{ end }}
 {{ end }}
