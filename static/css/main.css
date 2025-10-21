@@ -108,3 +108,17 @@ main { overflow-x: hidden; }
 @media (max-width: 768px) {
   .faq-grid { grid-template-columns: 1fr !important; }
 }
+
+/* Header menu links - hide on mobile */
+@media (max-width: 768px) {
+  .menu-link { display: none !important; }
+}
+
+/* Footer grid - stack on mobile */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+}
