@@ -93,3 +93,18 @@ main .container .prose pre   { white-space: pre-wrap; word-wrap: break-word; }
 main .container .prose a     { word-break: break-word; }
 main { overflow-x: hidden; }
 /* ----------------------------------------------------------------------- */
+
+/* Language switcher - responsive */
+@media (max-width: 768px) {
+  .lang-desktop { display: none !important; }
+  .lang-mobile { display: block !important; }
+}
+@media (min-width: 769px) {
+  .lang-desktop { display: flex !important; }
+  .lang-mobile { display: none !important; }
+}
+
+/* FAQ grid - responsive */
+@media (max-width: 768px) {
+  .faq-grid { grid-template-columns: 1fr !important; }
+}

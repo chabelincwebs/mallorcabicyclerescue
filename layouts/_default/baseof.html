@@ -20,8 +20,8 @@
           <img src="/img/logo.svg" alt="{{ .Site.Title }}" style="height:32px; width:auto;">
         </a>
 
-        <!-- Language switcher (explicit, stable) -->
-        <nav class="lang" style="margin-left:auto; margin-right:1rem; display:flex; gap:.75rem;">
+        <!-- Language switcher - links on desktop, dropdown on mobile -->
+        <nav class="lang-desktop" style="margin-left:auto; margin-right:1rem; display:flex; gap:.75rem;">
           <a href="/en/" {{ if eq .Site.Language.Lang "en" }}style="font-weight:bold;"{{ end }}>EN</a>
           <a href="/de/" {{ if eq .Site.Language.Lang "de" }}style="font-weight:bold;"{{ end }}>DE</a>
           <a href="/es/" {{ if eq .Site.Language.Lang "es" }}style="font-weight:bold;"{{ end }}>ES</a>
@@ -29,6 +29,14 @@
           <a href="/fr/" {{ if eq .Site.Language.Lang "fr" }}style="font-weight:bold;"{{ end }}>FR</a>
           <a href="/ca/" {{ if eq .Site.Language.Lang "ca" }}style="font-weight:bold;"{{ end }}>CA</a>
         </nav>
+        <select class="lang-mobile" onchange="if(this.value) window.location.href=this.value" style="margin-left:auto; margin-right:1rem; padding:0.5rem; border-radius:5px; border:1px solid #dee2e6; background:white; cursor:pointer; display:none;">
+          <option value="/en/" {{ if eq .Site.Language.Lang "en" }}selected{{ end }}>EN</option>
+          <option value="/de/" {{ if eq .Site.Language.Lang "de" }}selected{{ end }}>DE</option>
+          <option value="/es/" {{ if eq .Site.Language.Lang "es" }}selected{{ end }}>ES</option>
+          <option value="/it/" {{ if eq .Site.Language.Lang "it" }}selected{{ end }}>IT</option>
+          <option value="/fr/" {{ if eq .Site.Language.Lang "fr" }}selected{{ end }}>FR</option>
+          <option value="/ca/" {{ if eq .Site.Language.Lang "ca" }}selected{{ end }}>CA</option>
+        </select>
 
         <!-- Main header menu (from config only) -->
         <nav class="main" style="display:flex; gap:1rem; align-items:center;">
