@@ -25,6 +25,9 @@
           <a href="/en/" {{ if eq .Site.Language.Lang "en" }}style="font-weight:bold;"{{ end }}>EN</a>
           <a href="/de/" {{ if eq .Site.Language.Lang "de" }}style="font-weight:bold;"{{ end }}>DE</a>
           <a href="/es/" {{ if eq .Site.Language.Lang "es" }}style="font-weight:bold;"{{ end }}>ES</a>
+          <a href="/it/" {{ if eq .Site.Language.Lang "it" }}style="font-weight:bold;"{{ end }}>IT</a>
+          <a href="/fr/" {{ if eq .Site.Language.Lang "fr" }}style="font-weight:bold;"{{ end }}>FR</a>
+          <a href="/ca/" {{ if eq .Site.Language.Lang "ca" }}style="font-weight:bold;"{{ end }}>CA</a>
         </nav>
 
         <!-- Main header menu (from config only) -->
@@ -37,7 +40,7 @@
           {{ end }}
 
           <!-- Buy Rescue Button -->
-          <a href="{{ if eq .Site.Language.Lang "en" }}https://mallorcacycleshuttle.company.site/products/{{ else if eq .Site.Language.Lang "de" }}https://mallorcacycleshuttle.company.site/de/products/{{ else if eq .Site.Language.Lang "es" }}https://mallorcacycleshuttle.company.site/es/products/{{ end }}"
+          <a href="{{ if eq .Site.Language.Lang "en" }}https://mallorcacycleshuttle.company.site/products/{{ else if eq .Site.Language.Lang "de" }}https://mallorcacycleshuttle.company.site/de/products/{{ else if eq .Site.Language.Lang "es" }}https://mallorcacycleshuttle.company.site/es/products/{{ else if eq .Site.Language.Lang "it" }}https://mallorcacycleshuttle.company.site/it/products/{{ else if eq .Site.Language.Lang "fr" }}https://mallorcacycleshuttle.company.site/fr/products/{{ else if eq .Site.Language.Lang "ca" }}https://mallorcacycleshuttle.company.site/ca/products/{{ end }}"
              style="background:#f00000; color:white; padding:0.5rem 1rem; border-radius:5px; text-decoration:none; font-weight:600; white-space:nowrap;">
             {{ i18n "buy_rescue" }}
           </a>
