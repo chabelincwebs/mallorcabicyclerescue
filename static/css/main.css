@@ -94,6 +94,31 @@ main .container .prose a     { word-break: break-word; }
 main { overflow-x: hidden; }
 /* ----------------------------------------------------------------------- */
 
+/* Language switcher - pill/badge style for desktop */
+.lang-desktop a {
+  background: #f0f0f0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.lang-desktop a:hover {
+  background: #e0e0e0;
+  border-color: #ccc;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lang-desktop a[style*="font-weight:bold"] {
+  background: #f00000 !important;
+  color: white !important;
+  border-color: #d00000 !important;
+}
+
 /* Language switcher - responsive */
 @media (max-width: 768px) {
   .lang-desktop { display: none !important; }
@@ -114,11 +139,14 @@ main { overflow-x: hidden; }
   .menu-link { display: none !important; }
 }
 
-/* Footer grid - stack on mobile */
+/* Footer grid - stack on mobile with reordered items */
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
     text-align: center !important;
   }
+  .footer-contact { order: 1; }
+  .footer-legal { order: 2; }
+  .footer-logo { order: 3; }
 }
