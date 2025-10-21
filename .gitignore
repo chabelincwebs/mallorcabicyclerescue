@@ -1,6 +1,9 @@
-﻿/public/
+# Hugo build output
+/public/
 /resources/
 /.hugo_build.lock
+
+# OS files
 .DS_Store
 Thumbs.db
 
@@ -11,3 +14,21 @@ Thumbs.db
 content.menu-backup/
 layouts_backup/
 layouts_reset_prev/
+
+# Source text files (content already in markdown)
+*.txt
+
+# Hugo temporary files
+*.tmp.*
+layouts/**/*.tmp.*
+layouts/_default/*.tmp.*
+
+# Node modules (if using npm)
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

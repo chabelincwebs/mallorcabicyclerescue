@@ -30,12 +30,14 @@ pricing:
     price: "für längere Aufenthalte"
     desc: "Jetzt kaufen → Online-Shop"
 
+good_to_know_title: "Gut zu wissen"
 good_to_know:
   - "Typische Reaktionszeit: ~30–40 Minuten; in sehr abgelegenen Gegenden länger (z. B. Sa Calobra im Frühling)."
   - "Betriebszeiten: von 1 h nach Sonnenaufgang bis Sonnenuntergang."
   - "Nur Straßen: erreichbar mit normalem (kein 4×4) Fahrzeug."
   - "Medizinische Notfälle: zuerst Rettungsdienst rufen; wir sichern/transportieren das Rad."
 
+faq_title: "Häufig gestellte Fragen"
 faq:
   - q: "Eine Police pro Fahrer?"
     a: "Ja: eine Person + ein angegebenes Rad. Missbrauch → Stornierung/Erstattung ungenutzter Anteile."
@@ -68,5 +70,3 @@ faq:
   - q: "Rad wechseln?"
     a: "Gerne – mindestens 12 Std. vorher per E-Mail melden."
 ---
-
-

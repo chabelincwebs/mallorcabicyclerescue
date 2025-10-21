@@ -29,12 +29,14 @@ pricing:
     price: "best for longer stays"
     desc: "Buy now → links to online shop"
 
+good_to_know_title: "Good to know"
 good_to_know:
   - "Typical response: ~30–40 minutes; can be longer in very remote spots like Port de Sa Calobra during spring rush hour."
   - "Operating hours: from one hour after sunrise to sunset."
   - "Roads only: we recover cyclists from roads a standard (non-4×4) vehicle can access."
-  - "Medical emergencies: call an ambulance first; we’ll secure/transport your bike (bikes don’t fit in ambulances)."
+  - "Medical emergencies: call an ambulance first; we'll secure/transport your bike (bikes don't fit in ambulances)."
 
+faq_title: "Frequently Asked Questions"
 faq:
   - q: "Is it one policy per rider?"
     a: "Yes. One policy = one person + one specified bike. ID may be requested to prevent a group trying to cover everyone with one policy."
@@ -67,8 +69,5 @@ faq:
   - q: "What info do I need to buy?"
     a: "Name, contact details, accommodation address, start date, and the bike details."
   - q: "Can I change my bike during my stay?"
-    a: "Yes—email us at least 12 hours before and we’ll update the policy."
+    a: "Yes—email us at least 12 hours before and we'll update the policy."
 ---
-
-
-

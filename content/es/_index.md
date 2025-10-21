@@ -30,12 +30,14 @@ pricing:
     price: "para estancias largas"
     desc: "Comprar ahora → Tienda online"
 
+good_to_know_title: "Es bueno saberlo"
 good_to_know:
   - "Respuesta típica: ~30–40 min; puede ser más en zonas remotas (p. ej., Sa Calobra en primavera)."
   - "Horario: desde 1 h tras el amanecer hasta la puesta de sol."
   - "Solo carreteras accesibles con vehículo estándar (no 4×4)."
   - "Emergencias médicas: llama a una ambulancia; nosotros guardamos/transportamos tu bici."
 
+faq_title: "Preguntas frecuentes"
 faq:
   - q: "¿Una póliza por ciclista?"
     a: "Sí: una persona + una bici indicada. Uso indebido → cancelación y reembolso proporcional."
@@ -68,5 +70,3 @@ faq:
   - q: "¿Puedo cambiar de bici?"
     a: "Sí: avísanos por email con 12 h de antelación y actualizamos la póliza."
 ---
-
-
