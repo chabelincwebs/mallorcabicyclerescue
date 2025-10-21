@@ -9,6 +9,10 @@ languages:
     weight: 1
     contentDir: content/en
     menus:
+      main:
+        - name: "Rescue T&C's"
+          url: "/sale-terms/"
+          weight: 1
       legal:
         - name: "Legal Notice"
           url: "/legal-notice/"
@@ -27,6 +31,10 @@ languages:
     weight: 2
     contentDir: content/de
     menus:
+      main:
+        - name: "Rettungs-AGB"
+          url: "/verkaufsbedingungen/"
+          weight: 1
       legal:
         - name: "Impressum"
           url: "/rechtlicher-hinweis/"
@@ -45,6 +53,10 @@ languages:
     weight: 3
     contentDir: content/es
     menus:
+      main:
+        - name: "Condiciones del rescate"
+          url: "/condiciones-de-venta/"
+          weight: 1
       legal:
         - name: "Aviso legal"
           url: "/aviso-legal/"
@@ -63,6 +75,10 @@ languages:
     weight: 4
     contentDir: content/it
     menus:
+      main:
+        - name: "Termini e Condizioni di Soccorso"
+          url: "/termini-di-vendita/"
+          weight: 1
       legal:
         - name: "Avviso Legale"
           url: "/avviso-legale/"
@@ -81,6 +97,10 @@ languages:
     weight: 5
     contentDir: content/fr
     menus:
+      main:
+        - name: "Conditions générales du service de secours"
+          url: "/conditions-de-vente/"
+          weight: 1
       legal:
         - name: "Mentions Légales"
           url: "/mentions-legales/"
@@ -99,6 +119,10 @@ languages:
     weight: 6
     contentDir: content/ca
     menus:
+      main:
+        - name: "Termes i Condicions del Servei de Rescat"
+          url: "/condicions-de-venda/"
+          weight: 1
       legal:
         - name: "Avís Legal"
           url: "/avis-legal/"
