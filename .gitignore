@@ -15,6 +15,9 @@ content.menu-backup/
 layouts_backup/
 layouts_reset_prev/
 
+# Favicon source files
+favicons-original/
+
 # Source text files (content already in markdown)
 *.txt
 
