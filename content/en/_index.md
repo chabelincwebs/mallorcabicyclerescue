@@ -20,13 +20,13 @@ features:
 
 pricing:
   - label: "4 days"
-    price: "from €16"
+    price: "From €16"
     desc: "One rider + one specified bike"
   - label: "5 / 7 / 10 days"
-    price: "great-value bundles"
+    price: "Great-value bundles"
     desc: "Cover yourself and your riding partners"
   - label: "14 days"
-    price: "best for longer stays"
+    price: "Best for longer stays"
     desc: "Buy now → links to online shop"
 
 good_to_know_title: "Good to know"

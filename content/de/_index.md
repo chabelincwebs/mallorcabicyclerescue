@@ -21,13 +21,13 @@ features:
 
 pricing:
   - label: "4 Tage"
-    price: "ab 16 €"
+    price: "Ab 16 €"
     desc: "Eine Person + ein angegebenes Rad"
   - label: "5 / 7 / 10 Tage"
     price: "Preiswerte Pakete"
     desc: "Für dich und Mitfahrer"
   - label: "14 Tage"
-    price: "für längere Aufenthalte"
+    price: "Für längere Aufenthalte"
     desc: "Jetzt kaufen → Online-Shop"
 
 good_to_know_title: "Gut zu wissen"

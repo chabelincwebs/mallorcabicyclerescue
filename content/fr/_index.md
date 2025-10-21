@@ -1,0 +1,73 @@
+---
+title: "[TRANSLATE] Mallorca Bicycle Rescue"
+description: "[TRANSLATE] Island-wide cyclist pickup if your bike or body breaks. Simple. Fast. Reliable."
+hero_title: "[TRANSLATE] Mallorca Bicycle Rescue"
+hero_subtitle: "[TRANSLATE] If your bike or your body breaks, we get you where you need to be."
+
+cta:
+  label: "[TRANSLATE] Buy rescue cover"
+  url: "https://mallorcacycleshuttle.company.site/fr/products/"
+
+note: "[TRANSLATE] Fast, simple, island-wide."
+
+features:
+  - title: "[TRANSLATE] Why riders buy"
+    text: "[TRANSLATE] Peace of mind – explore the island without worrying about getting stranded."
+  - title: "[TRANSLATE] Save time & stress"
+    text: "[TRANSLATE] Avoid taxi zoning headaches, language complications and long roadside waits. Your whole day isn't ruined—nor your group's."
+  - title: "[TRANSLATE] Ready when needed"
+    text: "[TRANSLATE] One call, WhatsApp us your location, we confirm and send an ETA."
+
+pricing:
+  - label: "4 jours"
+    price: "À partir de 16 €"
+    desc: "Un cycliste + un vélo spécifié"
+  - label: "5 / 7 / 10 jours"
+    price: "Forfaits avantageux"
+    desc: "Pour vous et vos compagnons de route"
+  - label: "14 jours"
+    price: "Idéal pour les longs séjours"
+    desc: "Acheter maintenant → lien vers la boutique en ligne"
+
+good_to_know_title: "[TRANSLATE] Good to know"
+good_to_know:
+  - "[TRANSLATE] Typical response: ~30–40 minutes; can be longer in very remote spots like Port de Sa Calobra during spring rush hour."
+  - "[TRANSLATE] Operating hours: from one hour after sunrise to sunset."
+  - "[TRANSLATE] Roads only: we recover cyclists from roads a standard (non-4×4) vehicle can access."
+  - "[TRANSLATE] Medical emergencies: call an ambulance first; we'll secure/transport your bike (bikes don't fit in ambulances)."
+
+faq_title: "[TRANSLATE] Frequently Asked Questions"
+faq:
+  - q: "[TRANSLATE] Is it one policy per rider?"
+    a: "[TRANSLATE] Yes. One policy = one person + one specified bike. ID may be requested to prevent a group trying to cover everyone with one policy."
+  - q: "[TRANSLATE] Are rental or borrowed bikes covered?"
+    a: "[TRANSLATE] Yes—as long as it's the bike specified when purchasing (prevents group misuse)."
+  - q: "[TRANSLATE] Where will you take me?"
+    a: "[TRANSLATE] Your choice: nearest open bike shop, your accommodation, or your rental outlet."
+  - q: "[TRANSLATE] How long will I wait?"
+    a: "[TRANSLATE] Aim is 30–40 minutes; can be longer in remote areas (e.g., Port de Sa Calobra on very busy days). We have vehicles across the island and can bring in additional support."
+  - q: "[TRANSLATE] How many claims can I make?"
+    a: "[TRANSLATE] Once per policy per week per issue (e.g., 14-day cover includes two claims for the same issue). Different issues aren't capped, but abuse may result in cancellation and refund of the unused portion."
+  - q: "[TRANSLATE] Minimum distance from shop/hotel?"
+    a: "[TRANSLATE] At least 1 km from your accommodation or an open bike shop."
+  - q: "[TRANSLATE] When can I buy?"
+    a: "[TRANSLATE] At least 12 hours before you need it. We're rescue & recovery, not a taxi."
+  - q: "[TRANSLATE] Do you operate at night?"
+    a: "[TRANSLATE] No. From one hour after sunrise until sunset."
+  - q: "[TRANSLATE] Medical issues?"
+    a: "[TRANSLATE] Call an ambulance. We'll collect and look after your bike, but we are not medics."
+  - q: "[TRANSLATE] Off-road pickup?"
+    a: "[TRANSLATE] No. You must be on a road a standard (non-4×4) vehicle can drive on."
+  - q: "[TRANSLATE] Tandems, hand bikes, recumbents?"
+    a: "[TRANSLATE] Not currently covered—they don't fit in all vehicles."
+  - q: "[TRANSLATE] E-bikes?"
+    a: "[TRANSLATE] Covered for mechanical issues. A flat battery isn't a rescue reason; please manage charging—consider it a learning experience."
+  - q: "[TRANSLATE] Races/sportives?"
+    a: "[TRANSLATE] Not covered. We also cannot operate during the Mallorca 312 where there are road closures."
+  - q: "[TRANSLATE] Can I cancel?"
+    a: "[TRANSLATE] Yes—full refund as long as cover hasn't started."
+  - q: "[TRANSLATE] What info do I need to buy?"
+    a: "[TRANSLATE] Name, contact details, accommodation address, start date, and the bike details."
+  - q: "[TRANSLATE] Can I change my bike during my stay?"
+    a: "[TRANSLATE] Yes—email us at least 12 hours before and we'll update the policy."
+---

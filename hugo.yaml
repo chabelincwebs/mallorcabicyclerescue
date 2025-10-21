@@ -16,3 +16,15 @@ languages:
     languageName: "Español"
     weight: 3
     contentDir: content/es
+  it:
+    languageName: "Italiano"
+    weight: 4
+    contentDir: content/it
+  fr:
+    languageName: "Français"
+    weight: 5
+    contentDir: content/fr
+  ca:
+    languageName: "Català"
+    weight: 6
+    contentDir: content/ca

@@ -21,13 +21,13 @@ features:
 
 pricing:
   - label: "4 días"
-    price: "desde 16 €"
+    price: "Desde 16 €"
     desc: "Una persona + una bici especificada"
   - label: "5 / 7 / 10 días"
     price: "Paquetes con buen precio"
     desc: "Para ti y tus compañeros"
   - label: "14 días"
-    price: "para estancias largas"
+    price: "Para estancias largas"
     desc: "Comprar ahora → Tienda online"
 
 good_to_know_title: "Es bueno saberlo"
