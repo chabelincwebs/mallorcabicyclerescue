@@ -14,21 +14,27 @@ note: "Schnell, einfach, inselweit."
 features:
   - title: "Warum Fahrer kaufen"
     text: "Sorglos die Insel erkunden, ohne Angst liegenzubleiben."
+    image: "/img/es-colomer.webp"
   - title: "Zeit & Stress sparen"
     text: "Keine Taxi-Zonen, keine Sprachhürden, keine langen Wartezeiten am Straßenrand."
+    image: "/img/peace-sign-mbr.webp"
   - title: "Bereit wenn nötig"
     text: "Ein Anruf, Standort per WhatsApp teilen, wir schicken eine ETA."
+    image: "/img/couple-lighthouse.webp"
 
 pricing:
   - label: "4 Tage"
     price: "Ab 16 €"
     desc: "Eine Person + ein angegebenes Rad"
+    image: "/img/cdf.webp"
   - label: "5 / 7 / 10 Tage"
     price: "Preiswerte Pakete"
     desc: "Für dich und Mitfahrer"
+    image: "/img/down-cdf.webp"
   - label: "14 Tage"
     price: "Für längere Aufenthalte"
-    desc: "Jetzt kaufen → Online-Shop"
+    desc: "[Jetzt kaufen](https://mallorcacycleshuttle.company.site/de/products/)"
+    image: "/img/climbing-sc.webp"
 
 good_to_know_title: "Gut zu wissen"
 good_to_know:

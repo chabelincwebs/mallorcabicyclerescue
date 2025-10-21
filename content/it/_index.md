@@ -13,21 +13,27 @@ note: "Veloce, semplice, in tutta l'isola."
 features:
   - title: "Perché i ciclisti acquistano"
     text: "Tranquillità - esplora l'isola senza preoccuparti di restare a piedi."
+    image: "/img/es-colomer.webp"
   - title: "Risparmia tempo e stress"
     text: "Evita i problemi delle zone taxi, le complicazioni linguistiche e le lunghe attese a bordo strada. La tua giornata non va in fumo - e nemmeno quella del tuo gruppo."
+    image: "/img/peace-sign-mbr.webp"
   - title: "Pronti quando serve"
     text: "Una chiamata, inviaci la tua posizione su WhatsApp, confermiamo e ti inviamo un orario di arrivo stimato."
+    image: "/img/couple-lighthouse.webp"
 
 pricing:
   - label: "4 giorni"
     price: "Da €16"
     desc: "Un ciclista + una bici specificata"
+    image: "/img/cdf.webp"
   - label: "5 / 7 / 10 giorni"
     price: "Pacchetti convenienti"
     desc: "Per te e i tuoi compagni di viaggio"
+    image: "/img/down-cdf.webp"
   - label: "14 giorni"
     price: "Ideale per soggiorni lunghi"
-    desc: "Acquista ora → link al negozio online"
+    desc: "[Acquista ora](https://mallorcacycleshuttle.company.site/it/products/)"
+    image: "/img/climbing-sc.webp"
 
 good_to_know_title: "Da sapere"
 good_to_know:

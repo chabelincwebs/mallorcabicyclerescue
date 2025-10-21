@@ -1,26 +1,23 @@
 {{ define "main" }}
   {{/* Hero Section */}}
   <section class="hero" style="background:#f8f9fa; padding:2rem 0;">
-    <div class="container">
-      {{ if .Params.hero_title }}<h1 style="text-align:center; margin-bottom:2rem;">{{ .Params.hero_title }}</h1>{{ else }}<h1 style="text-align:center; margin-bottom:2rem;">{{ .Title }}</h1>{{ end }}
-      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:2rem; align-items:center;">
-        {{/* Column 1: Subtitle */}}
-        <div style="text-align:center;">
-          {{ if .Params.hero_subtitle }}<p style="font-size:1.25rem;">{{ .Params.hero_subtitle }}</p>{{ end }}
-        </div>
-        {{/* Column 2: Note */}}
-        <div style="text-align:center;">
-          {{ if .Params.note }}<p style="font-size:1.25rem; font-style:italic;">{{ .Params.note }}</p>{{ end }}
-        </div>
-        {{/* Column 3: CTA Button */}}
-        <div style="text-align:center;">
-          {{ if .Params.cta }}
-            <a href="{{ .Params.cta.url }}" class="cta-button" style="display:inline-block; background:#f00000; color:white; padding:1rem 2rem; text-decoration:none; border-radius:5px;">
-              {{ .Params.cta.label }}
-            </a>
-          {{ end }}
-        </div>
-      </div>
+    <div class="container" style="text-align:center;">
+      {{/* Title Button */}}
+      {{ if .Params.cta }}
+        <a href="{{ .Params.cta.url }}" style="display:inline-block; background:#f00000; color:white; padding:1rem 2rem; text-decoration:none; border-radius:5px; font-size:2rem; font-weight:bold; margin-bottom:2rem;">
+          {{ if .Params.hero_title }}{{ .Params.hero_title }}{{ else }}{{ .Title }}{{ end }}
+        </a>
+      {{ end }}
+
+      {{/* Centered Subtitle */}}
+      {{ if .Params.hero_subtitle }}
+        <p style="font-size:1.25rem; margin-bottom:1rem;">{{ .Params.hero_subtitle }}</p>
+      {{ end }}
+
+      {{/* Centered Note */}}
+      {{ if .Params.note }}
+        <p style="font-size:1.25rem; font-style:italic;">{{ .Params.note }}</p>
+      {{ end }}
     </div>
   </section>
 
@@ -30,9 +27,16 @@
     <div class="container">
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
         {{ range . }}
-        <div style="border:1px solid #dee2e6; padding:1.5rem; border-radius:5px; background:white;">
-          <h3>{{ .title }}</h3>
-          <p>{{ .text }}</p>
+        <div style="border:1px solid #dee2e6; padding:1.5rem; border-radius:5px; background:white; position:relative; overflow:hidden;">
+          {{ if .image }}
+          <div style="position:absolute; top:0; left:0; width:100%; height:100%; opacity:0.15; z-index:0;">
+            <img src="{{ .image }}" alt="{{ .title }}" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          {{ end }}
+          <div style="position:relative; z-index:1;">
+            <h3>{{ .title }}</h3>
+            <p>{{ .text }}</p>
+          </div>
         </div>
         {{ end }}
       </div>
@@ -46,10 +50,17 @@
     <div class="container">
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem;">
         {{ range . }}
-        <div style="border:1px solid #dee2e6; padding:1.5rem; border-radius:5px; background:white;">
-          <h3>{{ .label }}</h3>
-          <p style="font-size:1.5rem; font-weight:bold; color:#f00000;">{{ .price }}</p>
-          <p>{{ .desc }}</p>
+        <div style="border:1px solid #dee2e6; padding:1.5rem; border-radius:5px; background:white; position:relative; overflow:hidden;">
+          {{ if .image }}
+          <div style="position:absolute; top:0; left:0; width:100%; height:100%; opacity:0.15; z-index:0;">
+            <img src="{{ .image }}" alt="{{ .label }}" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          {{ end }}
+          <div style="position:relative; z-index:1;">
+            <h3>{{ .label }}</h3>
+            <p style="font-size:1.5rem; font-weight:bold; color:#f00000;">{{ .price }}</p>
+            <p>{{ .desc | markdownify }}</p>
+          </div>
         </div>
         {{ end }}
       </div>

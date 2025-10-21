@@ -13,21 +13,27 @@ note: "Ràpid, simple, a tota l'illa."
 features:
   - title: "Per què els ciclistes ho contracten"
     text: "Tranquil·litat - explora l'illa sense preocupar-te de quedar-te tirat."
+    image: "/img/es-colomer.webp"
   - title: "Estalvia temps i estrès"
     text: "Evita els maldecaps de les zones de taxi, les complicacions d'idioma i les llargues esperes a la vora de la carretera. El teu dia no queda espatllat - ni el del teu grup."
+    image: "/img/peace-sign-mbr.webp"
   - title: "A punt quan cal"
     text: "Una trucada, envia'ns la teva ubicació per WhatsApp, confirmem i t'enviem una hora d'arribada estimada."
+    image: "/img/couple-lighthouse.webp"
 
 pricing:
   - label: "4 dies"
     price: "Des de 16 €"
     desc: "Un ciclista + una bici especificada"
+    image: "/img/cdf.webp"
   - label: "5 / 7 / 10 dies"
     price: "Paquets amb bon preu"
     desc: "Per a tu i els teus companys"
+    image: "/img/down-cdf.webp"
   - label: "14 dies"
     price: "Ideal per estades llargues"
-    desc: "Compra ara → enllaç a la botiga en línia"
+    desc: "[Compra ara](https://mallorcacycleshuttle.company.site/ca/products/)"
+    image: "/img/climbing-sc.webp"
 
 good_to_know_title: "Bones a saber"
 good_to_know:
