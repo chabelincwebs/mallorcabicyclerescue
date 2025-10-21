@@ -24,9 +24,11 @@
     whatsappBtn: document.getElementById('whatsapp-btn'),
     smsBtn: document.getElementById('sms-btn'),
     gdprConsent: document.getElementById('gdpr-consent'),
-    installPrompt: document.getElementById('install-prompt'),
+    installBanner: document.getElementById('install-banner'),
     installBtn: document.getElementById('install-btn'),
     dismissInstall: document.getElementById('dismiss-install'),
+    iosInstallPrompt: document.getElementById('ios-install-prompt'),
+    dismissIos: document.getElementById('dismiss-ios'),
     langButtons: document.querySelectorAll('.language-selector button')
   };
 
@@ -70,6 +72,7 @@
     // Install prompt
     elements.installBtn?.addEventListener('click', installApp);
     elements.dismissInstall?.addEventListener('click', dismissInstallPrompt);
+    elements.dismissIos?.addEventListener('click', dismissIosPrompt);
 
     // PWA install prompt
     window.addEventListener('beforeinstallprompt', (e) => {
@@ -347,6 +350,7 @@
     // Check if already installed
     if (window.matchMedia('(display-mode: standalone)').matches) {
       hideInstallPrompt();
+      hideIosPrompt();
       return;
     }
 
@@ -355,21 +359,47 @@
       const dismissed = localStorage.getItem('install_prompt_dismissed');
       if (dismissed) {
         hideInstallPrompt();
+        hideIosPrompt();
+        return;
       }
     } catch (e) {
       console.error('Failed to check install prompt status:', e);
     }
+
+    // Check if iOS Safari (can't use beforeinstallprompt)
+    const isIos = /iPhone|iPad|iPod/.test(navigator.userAgent);
+    const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches;
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isIos && !isInStandaloneMode && isSafari) {
+      // Show iOS-specific instructions after short delay
+      setTimeout(() => {
+        showIosPrompt();
+      }, 2000);
+    }
   }
 
   function showInstallPrompt() {
-    if (elements.installPrompt) {
-      elements.installPrompt.style.display = 'block';
+    if (elements.installBanner) {
+      elements.installBanner.style.display = 'block';
     }
   }
 
   function hideInstallPrompt() {
-    if (elements.installPrompt) {
-      elements.installPrompt.style.display = 'none';
+    if (elements.installBanner) {
+      elements.installBanner.style.display = 'none';
+    }
+  }
+
+  function showIosPrompt() {
+    if (elements.iosInstallPrompt) {
+      elements.iosInstallPrompt.style.display = 'block';
+    }
+  }
+
+  function hideIosPrompt() {
+    if (elements.iosInstallPrompt) {
+      elements.iosInstallPrompt.style.display = 'none';
     }
   }
 
@@ -389,6 +419,15 @@
 
   function dismissInstallPrompt() {
     hideInstallPrompt();
+    try {
+      localStorage.setItem('install_prompt_dismissed', 'true');
+    } catch (e) {
+      console.error('Failed to save install prompt dismissal:', e);
+    }
+  }
+
+  function dismissIosPrompt() {
+    hideIosPrompt();
     try {
       localStorage.setItem('install_prompt_dismissed', 'true');
     } catch (e) {

@@ -296,29 +296,182 @@ body {
   transform: translateY(0);
 }
 
-/* Install Prompt */
-.install-prompt {
+/* Install Banner (Android/Chrome) */
+.install-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #d90000 100%);
+  padding: var(--spacing-lg);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  animation: slideUp 0.3s ease;
+}
+
+.install-banner-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  color: white;
+  position: relative;
+}
+
+.install-banner-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.install-banner-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.install-banner-text strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.install-banner-text p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.btn-install-primary {
+  background: white;
+  color: var(--color-primary);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-install-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-install-primary:active {
+  transform: translateY(0);
+}
+
+.btn-dismiss {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.btn-dismiss:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* iOS Install Prompt */
+.ios-install-prompt {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   background: white;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
   box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
-  border-top: 3px solid var(--color-primary);
+  border-top: 3px solid #007AFF;
   z-index: 1000;
+  animation: slideUp 0.3s ease;
 }
 
-.install-prompt p {
+.ios-install-content {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.ios-install-content .btn-dismiss {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background: var(--color-text-light);
+}
+
+.ios-install-content h3 {
   margin: 0 0 var(--spacing-md) 0;
-  text-align: center;
-  font-weight: 500;
+  color: var(--color-text);
+  font-size: 1.25rem;
 }
 
-.install-prompt .btn {
+.ios-install-content > p {
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--color-text-light);
+  font-size: 0.9375rem;
+}
+
+.ios-install-content ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ios-install-content li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-bg-alt);
+  border-radius: var(--border-radius);
   margin-bottom: var(--spacing-sm);
 }
 
+.ios-install-content li span {
+  flex: 1;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+}
+
+.ios-install-content li svg {
+  flex-shrink: 0;
+}
+
+/* Legacy install button styles (for compatibility) */
 .btn-install {
   background: var(--color-primary);
   color: white;
@@ -385,6 +538,44 @@ body {
 
   .action-buttons {
     gap: var(--spacing-sm);
+  }
+
+  /* Responsive Install Banner */
+  .install-banner {
+    padding: var(--spacing-md);
+  }
+
+  .install-banner-content {
+    flex-wrap: wrap;
+  }
+
+  .install-banner-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .install-banner-text p {
+    display: none; /* Hide description on very small screens */
+  }
+
+  .btn-install-primary {
+    width: 100%;
+    margin-top: var(--spacing-sm);
+  }
+
+  /* Responsive iOS Prompt */
+  .ios-install-prompt {
+    padding: var(--spacing-md);
+  }
+
+  .ios-install-content li {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .ios-install-content li svg {
+    align-self: center;
   }
 }
 
