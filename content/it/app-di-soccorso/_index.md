@@ -1,5 +1,5 @@
 ---
-title: "[TRANSLATE] Emergency Rescue Request"
+title: "Richiesta di Soccorso d'Emergenza"
 layout: "rescue-app"
 type: "rescue-app"
 robots: "noindex, nofollow"

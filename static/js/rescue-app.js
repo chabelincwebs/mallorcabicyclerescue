@@ -174,6 +174,7 @@
       phone: document.getElementById('phone')?.value || '',
       groupSize: document.getElementById('group-size')?.value || '1',
       bikeType: document.getElementById('bike-type')?.value || '',
+      destination: document.getElementById('destination')?.value || '',
       notes: document.getElementById('notes')?.value || ''
     };
   }
@@ -222,6 +223,10 @@
     message += `${i18n.phone_label || 'Phone'}: ${data.phone}\n`;
     message += `${i18n.group_label || 'Group Size'}: ${data.groupSize}\n`;
     message += `${i18n.bike_label || 'Bike Type'}: ${data.bikeType}\n`;
+
+    if (data.destination) {
+      message += `${i18n.destination_label || 'Destination'}: ${data.destination}\n`;
+    }
 
     if (data.notes) {
       message += `${i18n.notes_label || 'Notes'}: ${data.notes}\n`;
@@ -338,6 +343,7 @@
         if (data.phone) document.getElementById('phone').value = data.phone;
         if (data.groupSize) document.getElementById('group-size').value = data.groupSize;
         if (data.bikeType) document.getElementById('bike-type').value = data.bikeType;
+        if (data.destination) document.getElementById('destination').value = data.destination;
         if (data.notes) document.getElementById('notes').value = data.notes;
       }
     } catch (e) {
