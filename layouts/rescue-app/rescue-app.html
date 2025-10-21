@@ -125,53 +125,6 @@
         </button>
       </div>
     </form>
-
-    <!-- Install App Button (Fixed Position) -->
-    <div id="install-banner" class="install-banner" style="display:none;">
-      <div class="install-banner-content">
-        <div class="install-banner-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-          </svg>
-        </div>
-        <div class="install-banner-text">
-          <strong>{{ i18n "rescue_install_app" }}</strong>
-          <p>{{ i18n "rescue_install_prompt" }}</p>
-        </div>
-        <button id="install-btn" class="btn btn-install-primary">
-          {{ i18n "rescue_install_app" }}
-        </button>
-        <button id="dismiss-install" class="btn-dismiss">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- iOS Install Instructions -->
-    <div id="ios-install-prompt" class="ios-install-prompt" style="display:none;">
-      <div class="ios-install-content">
-        <button id="dismiss-ios" class="btn-dismiss">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
-          </svg>
-        </button>
-        <h3>{{ i18n "rescue_install_app" }}</h3>
-        <p>{{ i18n "rescue_install_ios_instructions" }}</p>
-        <ol>
-          <li>
-            <span>1. {{ i18n "rescue_install_ios_step1" }}</span>
-            <svg width="20" height="28" viewBox="0 0 20 28" fill="#007AFF">
-              <path d="M10 0L9 1v10H1l-1 1v4l1 1h8v10l1 1h0l1-1V17h8l1-1v-4l-1-1h-8V1L10 0z"/>
-            </svg>
-          </li>
-          <li>
-            <span>2. {{ i18n "rescue_install_ios_step2" }}</span>
-          </li>
-        </ol>
-      </div>
-    </div>
   </div>
 
   <!-- Rescue App JavaScript -->
