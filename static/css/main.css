@@ -113,10 +113,11 @@ main { overflow-x: hidden; }
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.lang-desktop a[style*="font-weight:bold"] {
+.lang-desktop a.active {
   background: #f00000 !important;
   color: white !important;
   border-color: #d00000 !important;
+  font-weight: 700 !important;
 }
 
 /* Language switcher - responsive */
